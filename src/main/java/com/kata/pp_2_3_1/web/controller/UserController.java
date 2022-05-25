@@ -1,11 +1,11 @@
-package web.controller;
+package com.kata.pp_2_3_1.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import web.entity.User;
-import web.service.UserService;
+import com.kata.pp_2_3_1.web.entity.User;
+import com.kata.pp_2_3_1.web.service.UserService;
 
 
 @Controller
@@ -32,7 +32,7 @@ public class UserController {
     }
 
     @PostMapping()
-    public String create(@ModelAttribute("user") User user) {
+    public String createUser(@ModelAttribute("user") User user) {
         userService.addUser(user);
         return "redirect:/users";
     }

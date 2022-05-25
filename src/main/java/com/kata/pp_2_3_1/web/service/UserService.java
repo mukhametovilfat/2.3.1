@@ -1,6 +1,6 @@
-package web.service;
+package com.kata.pp_2_3_1.web.service;
 
-import web.entity.User;
+import com.kata.pp_2_3_1.web.entity.User;
 
 import java.util.List;
 

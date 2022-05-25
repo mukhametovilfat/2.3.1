@@ -1,6 +1,6 @@
-package web.dao;
+package com.kata.pp_2_3_1.web.dao;
 
-import web.entity.User;
+import com.kata.pp_2_3_1.web.entity.User;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package web.entity;
+package com.kata.pp_2_3_1.web.entity;
 
 import javax.persistence.*;
 

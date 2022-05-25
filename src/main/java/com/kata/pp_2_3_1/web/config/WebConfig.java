@@ -1,4 +1,4 @@
-package web.config;
+package com.kata.pp_2_3_1.web.config;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -12,7 +12,7 @@ import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
 @Configuration
-@ComponentScan("web")
+@ComponentScan("com.kata.pp_2_3_1.web")
 @EnableWebMvc
 public class WebConfig implements WebMvcConfigurer {
     private final ApplicationContext applicationContext;

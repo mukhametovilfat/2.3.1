@@ -1,4 +1,4 @@
-package web.config;
+package com.kata.pp_2_3_1.web.config;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

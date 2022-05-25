@@ -1,4 +1,4 @@
-package web.config;
+package com.kata.pp_2_3_1.web.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -18,15 +18,18 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 @PropertySource("classpath:properties")
-@ComponentScan("web")
+@ComponentScan("com.kata.pp_2_3_1.web")
 
 public class HibernateConfig {
     private Environment environment;
 
-    @Autowired
-    public void setEnvironment(Environment environment) {
+    public HibernateConfig(Environment environment) {
         this.environment = environment;
     }
+//    @Autowired
+//    public void setEnvironment(Environment environment) {
+//        this.environment = environment;
+//    }
 
     @Bean
     public DataSource getDataSource() {
@@ -42,7 +45,7 @@ public class HibernateConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean entityManager = new LocalContainerEntityManagerFactoryBean();
         entityManager.setDataSource(getDataSource());
-        entityManager.setPackagesToScan("web");
+        entityManager.setPackagesToScan("com.kata.pp_2_3_1.web");
         entityManager.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
 
         Properties props = new Properties();

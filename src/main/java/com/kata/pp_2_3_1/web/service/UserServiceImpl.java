@@ -1,9 +1,9 @@
-package web.service;
+package com.kata.pp_2_3_1.web.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import web.dao.UserDao;
-import web.entity.User;
+import com.kata.pp_2_3_1.web.dao.UserDao;
+import com.kata.pp_2_3_1.web.entity.User;
 
 import javax.transaction.Transactional;
 import java.util.List;
@@ -12,10 +12,13 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
     private UserDao userDao;
 
-    @Autowired
-    public void setUserDao(UserDao userDao) {
+    public UserServiceImpl(UserDao userDao) {
         this.userDao = userDao;
     }
+//    @Autowired
+//    public void setUserDao(UserDao userDao) {
+//        this.userDao = userDao;
+//    }
 
     @Override
     public void addUser(User user) {

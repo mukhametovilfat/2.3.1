@@ -1,7 +1,7 @@
-package web.dao;
+package com.kata.pp_2_3_1.web.dao;
 
 import org.springframework.stereotype.Repository;
-import web.entity.User;
+import com.kata.pp_2_3_1.web.entity.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -35,6 +35,6 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public List<User> getAllUsers() {
-        return entityManager.createQuery("from User").getResultList();
+        return entityManager.createQuery("from User",User.class).getResultList();
     }
 }
